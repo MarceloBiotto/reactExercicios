@@ -20,12 +20,12 @@ function App() {
         </h1>
    {/* Imagem em public */}
         <div>
-          <img src="/gato-gordo-o-que-fazer-para-ajudar-1.jpg" alt="gato gordo" />
+          <img src="/gato-gordo-o-que-fazer-para-ajudar-1.jpg" alt="gato gordo" className='gatos'/>
         </div>
 
         {/*imagem em asset*/}
         <div>
-          <img src={GatoGordo} alt="obesidade entre gatos" />
+          <img src={GatoGordo} alt="obesidade entre gatos" className='gatos'/>
         </div>
 
         <ManageData />
