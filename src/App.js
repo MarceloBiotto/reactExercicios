@@ -8,6 +8,8 @@ import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
 import CarDetails from './components/CarDetails';
 import Fragment from './components/Fragment';
+import Container from './components/Container';
+import ExecuteFunction from './components/ExecuteFunction';
 
 
 
@@ -16,6 +18,9 @@ function App() {
   //const name = "Joaquim";
   const[userName] = useState("Maria");
 
+function ShowMessage(){
+  console.log("Evendo do componente pai!")
+}
 
   const cars=[
     {
@@ -73,12 +78,23 @@ function App() {
     {/*loop em array de objetos */}
     {cars.map((car) => (
       <CarDetails brand={car.brand} 
+      key={car.id}
       color={car.color} 
       km={car.km} 
       newCar={car.newCar}/>
     ))}
   {/*Fragment */}
     <Fragment propFragment="teste"/>
+
+
+    {/* children prop */}
+    <Container myValue = "testing">
+      <p>E este é o conteudo</p>
+    </Container>
+
+    {/* executar função */}
+      <ExecuteFunction myFunction=
+      {ShowMessage}/>
     </div>
   );
 }
