@@ -1,17 +1,19 @@
 
+import { useState } from 'react';
 import './App.css';
 import GatoGordo from './assets/obesidade-gatos.jpg'
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import ConditionalRender from './components/ConditionalRender';
 import ShowUserName from './components/ShowUserName';
-import { useState } from 'react';
 import CarDetails from './components/CarDetails';
+import Fragment from './components/Fragment';
+
 
 
 function App() {
 
-  const name = "Joaquim";
+  //const name = "Joaquim";
   const[userName] = useState("Maria");
 
 
@@ -75,6 +77,8 @@ function App() {
       km={car.km} 
       newCar={car.newCar}/>
     ))}
+  {/*Fragment */}
+    <Fragment propFragment="teste"/>
     </div>
   );
 }
